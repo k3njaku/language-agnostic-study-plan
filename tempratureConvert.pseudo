@@ -1,0 +1,22 @@
+// Step 1: Define a list of temperature in Celsius
+// This list contains the Celsius temperature we want to convert
+celsiusList = [0, 10, 25, 100]
+
+// Step 2: Create an empty list to store the converted temperature in Fahrenheit
+// This list will store all the converted temperature in Fahrenheit
+fahrenheitList = []
+
+
+// Step 3: Loop through each temperature in the Celsius list
+// The 'for' loop will go through each element of the list
+for c in celsiusList:
+    // Step 4: Convert the current Celsius temperature to Fahrenheit
+    // The formula to convert Celsius to Fahrenheit is : (Celsius * 1.8) + 32
+    f = (c * 1.8) + 32
+    // Step 5: Add the converted Fahrenheit temperature to the Fahrenheit list
+    // The 'append' method adds the new Fahrenheit temperature to 'fahrenheitList'
+    fahrenheitList.append(f)
+
+// Step 6: Print the list of Fahrenheit temperatures
+// This outputs the final list of converted temperatures
+print(fahrenheitList)

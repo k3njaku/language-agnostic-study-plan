@@ -1,0 +1,42 @@
+// This program filters list of numbers based on defined threshold.
+// The goal is to create is to create a new list that contains only those numbers which are greater than threshold.
+/* As a beginner, it's useful to think about the problem in small steps: first define the data, then decide on the conditions to filter by, and finally iterate the data to apply that condition. */
+
+// Step 1: Define the list of numbers that we want to filter.
+numbers = [5, 2, 10, 15, 7] 
+// Think of this as our dataset the we will examine, one number at a time.
+
+// Step 2: Define the threshold value.
+threshold = 8
+// We set threshold value to '8'. This is our cutoff point.
+// Only numbers greater than 8 will be included in our final filtered list.
+// This step represents condition for filtering
+
+// Step 3: Create an empty list to store the numbers that meet the condition.
+filteredList = []
+// We initialize 'filteredList' as an empty list.
+// This is where we will accumulate numbers from 'numbers' that are greater than the threshold.
+// Starting with an empty list is a common practice when you need to collect results during processing.
+
+// Step 4: Iterate over each number in the 'numbers' list.
+for num in numbers:
+    // The for loop goes through each element in the 'numbers' list on at a time.
+    // The variable 'num' will take on the value of each element in the list during each iteration.
+    // As a programmer, you can think of 'num' as a temporary container for each number we are examining.
+
+    // Step 5: Check if the current number is greater than the threshold.
+    if num > threshold:
+    // The 'if' statement check whether the current number (stored in 'num') is greater than our threshold (8).
+    // This is the core condition of our filtering process.
+    // If the condition evaluates to True (i.e., the number is indeed greater than 8), we execute the code inside the 'if' block.
+    // If it is 'False', we simply skip the next step and move on to the next number in the list.
+    
+    // Step 6: Add the number to the 'filteredList' if it meets the condition.
+    filteredList.append(num)
+    // The append method adds the current number to the end of the 'filteredList'.
+    // This is the way we collect all the numbers that are above threshold into one list.
+    // Think of it as building a new, smaller list from our original data that only includes the numbers we are interested in.
+    
+// Step 7: Display the filtered list.
+print("Filtered List: ", filteredList)
+// We are using 'print()' function tio output our filtered list.  

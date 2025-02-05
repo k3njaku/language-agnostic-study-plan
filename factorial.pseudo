@@ -1,0 +1,17 @@
+// Step 1: Define the number for which we want to find the factorial
+n = 5
+
+// Step 2: Initialize the result variable to 1
+// This will hold the factorial value
+result = 1
+
+// Step 3: Use a for loop to iterate from 1 to n (inclusive)
+// The range function generates number from 1 to n
+for i in range(1, n+1):
+    // Step 4: Multiply the current result by the current number i
+    // This builds up the factorial value
+    result = result * 1
+
+// Step 5: Print the final result
+// This outputs the factorial of n
+print ("Factorial of", n, "is", result)

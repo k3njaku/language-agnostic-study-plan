@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudocode Problems & Solutions</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: white;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #ffcc00;
+        }
+        pre {
+            background: #282c34;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Pseudocode Problems & Solutions</h1>
+
+    <h2>1. Determine if a Number is Positive, Negative, or Zero</h2>
+    <p><strong>Problem Statement:</strong> Given an integer <code>num</code>, classify it as positive, negative, or zero.</p>
+    
+    <pre><code class="language-python"># Pseudocode: Check sign of a number
+if num > 0:
+    print("Positive")
+elif num < 0:
+    print("Negative")
+else:
+    print("Zero")</code></pre>
+
+    <h2>2. Calculate the Average of a List of Numbers</h2>
+    <p><strong>Problem Statement:</strong> Compute the average of a given list of numbers.</p>
+
+    <pre><code class="language-python"># Pseudocode: Calculate average of a list
+tempList = [23, 19, 30, 25, 21]   
+total = 0
+count = 0
+
+for value in tempList:
+    total = total + value
+    count = count + 1
+
+average = total / count
+print("Average is", average)</code></pre>
+
+    <h2>3. Find the Maximum in a List of Numbers</h2>
+    <p><strong>Problem Statement:</strong> Given a list of integers, find the maximum value among them.</p>
+
+    <pre><code class="language-python"># Pseudocode: Find maximum in a list
+numList = [3, 17, 9, 25, 1]  
+maxValue = numList[0]        
+
+for num in numList:
+    if num > maxValue:
+        maxValue = num
+
+print("Maximum value:", maxValue)</code></pre>
+
+    <h2>4. Count How Many Times a Character Appears in a String</h2>
+    <p><strong>Problem Statement:</strong> Count the occurrences of a character in a string.</p>
+
+    <pre><code class="language-python"># Pseudocode: Count character occurrences
+text = "banana"
+targetChar = "a"
+count = 0
+
+for ch in text:
+    if ch == targetChar:
+        count = count + 1
+
+print("Character", targetChar, "appears", count, "times")</code></pre>
+
+    <h2>5. Check Driving Eligibility</h2>
+    <p><strong>Problem Statement:</strong> Determine if a person is eligible to drive based on age.</p>
+
+    <pre><code class="language-python"># Pseudocode: Check driving eligibility
+if age >= 18:
+    print("Eligible to drive")
+else:
+    print("Not eligible to drive")</code></pre>
+
+    <h2>6. Sum All Even Numbers in a Range</h2>
+    <p><strong>Problem Statement:</strong> Sum all even numbers in a given range.</p>
+
+    <pre><code class="language-python"># Pseudocode: Sum even numbers in a range
+start = 1
+end = 10
+sumEven = 0
+
+for num in range(start, end + 1):
+    if (num % 2) == 0:
+        sumEven = sumEven + num
+
+print("Sum of even numbers:", sumEven)</code></pre>
+
+    <h2>7. Validate a Password (Basic)</h2>
+    <p><strong>Problem Statement:</strong> Ensure a password meets basic security criteria.</p>
+
+    <pre><code class="language-python"># Pseudocode: Validate password
+password = "abc1234"
+isValid = False
+
+if len(password) < 8:
+    print("Invalid: Password too short")
+else:
+    digitFound = False
+    for ch in password:
+        if '0' <= ch <= '9':
+            digitFound = True
+
+    if digitFound:
+        print("Valid password")
+    else:
+        print("Invalid: No digit found")</code></pre>
+
+    <h2>8. Check If a Number is Prime</h2>
+    <p><strong>Problem Statement:</strong> Determine if an integer <code>n</code> is prime.</p>
+
+    <pre><code class="language-python"># Pseudocode: Check if number is prime
+n = 29
+isPrime = True
+
+if n <= 1:
+    isPrime = False
+else:
+    for i in range(2, n):
+        if (n % i) == 0:
+            isPrime = False
+            break
+
+if isPrime:
+    print(n, "is prime")
+else:
+    print(n, "is not prime")</code></pre>
+
+    <h2>9. Calculate Factorial of a Number</h2>
+    <p><strong>Problem Statement:</strong> Compute the factorial of a number.</p>
+
+    <pre><code class="language-python"># Pseudocode: Factorial of n
+n = 5
+result = 1
+
+for i in range(1, n + 1):
+    result = result * i
+
+print("Factorial of", n, "is", result)</code></pre>
+
+    <h2>10. Convert Celsius to Fahrenheit</h2>
+    <p><strong>Problem Statement:</strong> Convert a list of Celsius temperatures to Fahrenheit.</p>
+
+    <pre><code class="language-python"># Pseudocode: Convert Celsius to Fahrenheit
+celsiusList = [0, 10, 25, 100]
+fahrenheitList = []
+
+for c in celsiusList:
+    f = (c * 1.8) + 32
+    fahrenheitList.append(f)
+
+print(fahrenheitList)</code></pre>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+</body>
+</html>
