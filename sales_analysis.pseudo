@@ -1,0 +1,90 @@
+// Problem Statement
+// we are writing this program to perform weekly sales analysis
+// the purpose is to reinforce the fundamental programming concepts such as
+// computational thinking, variables, control flow, loops and functions
+// by breaking down the problem into small, clear steps and including detailed
+// comments that explain thought process, we build muscle memory and ensure
+// that no important detail is forgotten, this exercise is especially for 
+// a learner with ADHD who benefits from seeing every step of the problem-solving
+// approach laid out clearly in one view.
+
+function analyzeWeeklySales (salesData, dailyTarget) {
+    //Initialize totalSales to zero because no sales have been added yet.
+    set totalSales to 0
+
+    // Initialize highestSale to null; this will store the maximum sale value.
+    set highestSale to null
+
+    // Initialize lowestSale to null; this will store the minimum sale value.
+    set lowestSale to null
+
+    // iterate over each (day, sale) pair in the salesdata collection.
+    for each (day, sale) in salesData do
+        // Output the current day and its sales amount to track progress.
+        output "analyzing " + day + ": $" + sale
+
+        // Check if the current sale meets or exceeds the daily target.
+        if sale >= dailyTarget then
+            // if the sale is sufficient, output a congratulatory message
+            output "good job! target of $" + dailyTarget + " met on " + day + "."
+
+            else
+            // if the sale is below the target, output an encouraging message
+            output "keep pushing! target of $" + dailyTarget + " not met on " + day +"."
+
+        end if
+
+        // add the current day's sale to totalSales.
+        set totalSales to totalSales + sale
+
+        // update highestSale if this sale is greater than the current highestSale
+        if highestSale is null or sale > highestSale then
+            set highestSale to sale
+        end if
+
+        // output separately to visually distinguish each day's output.
+        output "____"
+    end for
+
+    // calculate averageSales by dividing totalSales by number of days
+    set averageSales to totalSales / length(salesdata)
+
+    // compile the overall statistics into a record for easy reference
+    set weeklyStats to {
+        "totalSales": totalSales,
+        "averageSales": averageSales,
+        "highestSale": highestSale,
+        "lowestSale": lowestSale
+    }
+
+    // Output the compiled weekly statistics:
+    output "Weekly sales statistics:"
+    output "Total Sales: $" + totalSales
+    output "Average Sales: $" + averageSales
+    output "Highest Sales: $" + highestSale
+    output "Lowest Sales: $" + lowestSale
+
+    // return the record containing all the statistics
+    return weeklyStats
+end function
+}
+
+// main execution block:
+begin
+    // define weeklySalesData as a record where each key is a day and each value is the sale.
+    set weeklySalesData to {
+        "monday": 450,
+        "tuesday": 520,
+        "wednesday": 480,
+        "thursday": 600,
+        "friday": 550,
+        "saturday": 700,
+        "sunday": 400
+    }
+
+    // set dailySalesTarget as the benchmark sale value for each day.
+    set dailySalesTarget to 500
+
+    // call the analyzeWeeklySales function with the sales data and target.
+    call analyzeWeeklySales()
+end
